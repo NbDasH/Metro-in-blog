@@ -1,2 +1,3 @@
 .DS_Store
-app/tmp/cache/
+*.swp
+/app/tmp
