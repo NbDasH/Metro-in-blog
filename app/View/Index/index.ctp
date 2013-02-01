@@ -29,23 +29,11 @@
 </div>
 
 <div id="data">
-	<a href="http://user.qzone.qq.com/273056333/" data-type='long_block' data-image='img/metro/rizhi.png' data-bgc-start="#4f2eb2" data-bgc-end="#6239c7">日志</a>
-    <a href="http://weibo.com/thedash" data-type='block' data-image='img/metro/weibo.png' data-bgc-start="#fbc600" data-bgc-end="#fcd74d">新浪微博</a>
-    <a href="http://mp3.baidu.com" data-type='block' data-image='img/metro/music.png' data-bgc-start="#89009b" data-bgc-end="#a300b5">音乐</a>
-    <a href="http://user.qzone.qq.com/273056333/" data-type='long_block' data-image='img/metro/photo.png' data-bgc-start="#1a819c" data-bgc-end="#239fb3">相册</a>
-    <a href="http://valkyria-duel.hangame.co.jp/index.nhn" data-type='long_block' data-image='img/metro/nvwushen.png' data-bgc-start="#5282c9" data-bgc-end="#6c96d5">战场女武神Duel</a>
-    <a href="http://www.12306.cn" data-type='long_block' data-image='img/metro/12306.png' data-bgc-start="#aa4d47" data-bgc-end="#c66e68">12306订票</a>
-    <a href="http://baidu.com/" data-type='block' data-image='img/metro/baidu.png' data-bgc-start="#fff" data-bgc-end="#fff">百度</a>
-    <a href="http://www.ltaaa.com/" data-type='block' data-image='img/metro/longteng.png' data-bgc-start="#14629b" data-bgc-end="#1773b2">龙腾网</a>
-    <a href="http://www.acfun.tv" data-type='long_block' data-image='img/metro/acfun.png' data-bgc-start="#333" data-bgc-end="#444">AcFun</a>
-    <a href="http://store.apple.com/cn" data-type='block' data-image='img/metro/apple.png' data-bgc-start="#000" data-bgc-end="#000">apple store</a>
-    <a href="http://www.bilibili.tv" data-type='long_block' data-image='img/metro/bilibili.png' data-bgc-start="#f16d2b" data-bgc-end="#fe9663">嗶哩嗶哩</a>
-    <a href="http://www.google.com" data-type='long_block' data-image='img/metro/google.png' data-bgc-start="#fff" data-bgc-end="#fff">Google</a>
-    <a href="http://www.battlenet.com.cn" data-type='block' data-image='img/metro/battlenet.png' data-bgc-start="#0d0d10" data-bgc-end="#181c1f">战网</a>
-    <a href="http://www.renren.com/281907598/profile" data-type='block' data-image='img/metro/renren.png' data-bgc-start="#fff" data-bgc-end="#fff">人人网</a>
-    
-    
-    
+	<?php
+		foreach($index_blocks as $v){
+			echo '<a href="'.$v['IndexBlock']['url'].'" data-type="'.$v['IndexBlock']['type'].'" data-image="'.IMAGES_URL.$v['IndexBlock']['img_path'].'" data-bgc-start="#'.$v['IndexBlock']['bgc_start'].'" data-bgc-end="#'.$v['IndexBlock']['bgc_end'].'">'.$v['IndexBlock']['name'].'</a>';
+		}
+	?>
     
     <a href="http://user.qzone.qq.com/273056333/" data-type='long_block' data-image='img/metro/rizhi.png' data-bgc-start="#4f2eb2" data-bgc-end="#6239c7">日志</a>
     <a href="http://weibo.com/thedash" data-type='block' data-image='img/metro/weibo.png' data-bgc-start="#fbc600" data-bgc-end="#fcd74d">新浪微博</a>
